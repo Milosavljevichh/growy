@@ -3801,3 +3801,35 @@ input, select, textarea {
 			font-weight: bold;
 			margin-bottom: 0;
 		}
+
+		#whyUsContainer{
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			gap: 12px;
+			width: 100%;
+		}
+
+		.reasonBlock{
+			padding: 24px;
+			border-radius: 12px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 33%;
+		}
+
+		.reasonBlock, .reasonBlock h2{
+			color:#ffffff !important;
+		}
+
+		.reasonBlock *:first-child{
+			margin: 16px 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.c1 {
+			background-color: #e37682;
+		}
