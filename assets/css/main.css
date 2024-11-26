@@ -3783,3 +3783,21 @@ input, select, textarea {
 			}
 
 		}
+
+		#nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-left: 36px !important;
+			font-weight: bold;
+		}
+		
+		#logo {
+			border-bottom: none;
+		}
+
+		#logo *  {
+			
+			font-weight: bold;
+			margin-bottom: 0;
+		}
