@@ -72,7 +72,7 @@
 										<h2>Why us</h2>
 									</header>
 									<div id="whyUsContainer">
-										
+
 									</div>
 								</div>
 							</section>
@@ -82,16 +82,16 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Who are we</h2>
+											<h2>Our vision</h2>
 										</header>
-										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+										<p>At Growy, our vision is to empower businesses of all sizes to achieve sustainable growth through innovative IT solutions. We strive to be the trusted partner that transforms challenges into opportunities, unlocking the full potential of technology to drive progress.
+
+											By fostering collaboration, embracing innovation, and maintaining an unwavering commitment to excellence, we aim to shape a future where businesses thrive, adapt, and succeed in an ever-evolving digital landscape. Together, we grow.</p>
 										<ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>
 										</ul>
 									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+									<span class="image"><img id="companyImg" src="images/company.jpg" alt="company" /></span>
 								</div>
 							</section>
 
@@ -113,19 +113,43 @@
 								</footer>
 							</section>
 
-						<!-- Get Started -->
+						<!-- Contact -->
 							<section id="cta" class="main special">
 								<header class="major">
 									<h2>Contact us</h2>
 									<p>Do what's right for your business and make it thrive,<br />
 									it's easy! Contact our team and you're already halfway there.</p>
 								</header>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button primary">Get Started</a></li>
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
+								<div id="formContainer">
+									<form id="form" method="post" action="obrada.php">
+										<input type="text" placeholder="Company name" name="company" id="company" />
+										<div class="formGroup">
+											<input type="email" placeholder="Email" name="email" id="email" />
+											<input type="text" placeholder="Phone" name="phone" id="phone" />
+										</div>
+										<div id="radioGroup" class="formGroup">
+											<div>
+												<input type="radio" name="companySize" id="companySizeSmall" />
+												<label for="companySizeSmall">Startup</label>
+											</div>
+											<div>
+												<input type="radio" name="companySize" id="companySizeBig" />
+												<label for="companySizeBig">Corporation</label>
+											</div>
+										</div>
+										<select name="serviceSelect" id="serviceSelect">
+											<option value="0">-- Select a service --</option>
+											<option value="1">Custom Software Development</option>
+											<option value="2">Data Analytics and Insights</option>
+											<option value="3">Cloud Solutions and Migration</option>
+										</select>
+										<div>
+											<input type="checkbox" name="terms" id="terms" />
+											<label for="terms">I agree to terms and conditions</label>
+										</div>
+										<input type="submit" id="submit" />
+									</form>
+								</div>
 							</section>
 
 					</div>
