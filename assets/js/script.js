@@ -98,3 +98,58 @@ if (achievementContainer) {
     }
     achievementContainer.appendChild(ul)
 }
+
+//Why US
+const usContainer = document.querySelector('#whyUsContainer')
+const reasons = [
+    {
+        img:"puzzle.png",
+        alt:"puzzle",
+        heading:"Tailored solutions",
+        text:"We understand that no two businesses are the same. That's why we craft personalized IT strategies designed to address your unique challenges and amplify your strengths. "
+    },
+    {
+        img:"experience.png",
+        alt:"experience",
+        heading:"Experts",
+        text:"Our team of experienced professionals leverages cutting-edge technology and industry insights to drive your growth.We ensure your business stays ahead in a competitive market."
+    },
+    {
+        img:"success.png",
+        alt:"success",
+        heading:"Commitment",
+        text:"Your success is our priority. From seamless project execution to ongoing support, we’re dedicated to delivering results that fuel your business growth and help you achieve long-term goals."
+    },
+    {
+        img:"honest.png",
+        alt:"honesty",
+        heading:"Honesty",
+        text:"With Growy, you’ll always know the status of your projects, empowering you to make informed decisions and stay in control of your growth journey.We believe in building strong partnerships."
+    },
+]
+
+const imgPath = "./images/"
+function whyUsBlock(block, index){
+    let article = document.createElement('article')
+    article.classList.add('reasonBlock')
+    article.classList.add(`c${index + 1}`)
+
+    let img = document.createElement('img')
+    img.src = imgPath.concat(block.img)
+    img.alt = block.alt
+
+    let h2 = document.createElement('h2')
+    h2.innerHTML = block.heading
+
+    let p = document.createElement('p')
+    p.innerHTML = block.text
+
+    article.append(img, h2, p)
+    return article
+}
+
+if (usContainer) {
+    for (let i = 0;i<reasons.length;i++){
+        usContainer.appendChild(whyUsBlock(reasons[i], i))
+    }
+}

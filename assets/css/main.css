@@ -3804,9 +3804,10 @@ input, select, textarea {
 
 		#whyUsContainer{
 			display: flex;
+			flex-wrap: wrap;
 			align-items: center;
-			justify-content: space-around;
-			gap: 12px;
+			justify-content: center;
+			gap: 30px;
 			width: 100%;
 		}
 
@@ -3816,7 +3817,9 @@ input, select, textarea {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			width: 33%;
+			min-width: 270px;
+			width: 48%;
+			min-height: 385px;
 		}
 
 		.reasonBlock, .reasonBlock h2{
@@ -3832,4 +3835,16 @@ input, select, textarea {
 
 		.c1 {
 			background-color: #e37682;
+		}
+
+		.c2 {
+			background-color: #935d8c;
+		}
+
+		.c3 {
+			background-color: #61a5cf;
+		}
+
+		.c4 {
+			background-color: #5f4d93;
 		}
