@@ -3905,3 +3905,32 @@ input, select, textarea {
 				align-items: flex-start !important;
 			}
 		}
+
+		#services li{
+			margin-top: 50px;
+		}
+
+		.service {
+			position: relative;
+			border-radius: 12px;
+			box-shadow: 0px 10px 32px #63636372;
+			padding: 30px;
+			font-weight: 500;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			height: 100%;
+		}
+
+		.service h3 {
+			margin-top: 24px;
+		}
+
+		.serviceImg{
+			position: absolute;
+			top: -11%;
+			background-color: #636363 ;
+			padding: 10px;
+			border-radius: 8px;
+		}
