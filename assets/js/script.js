@@ -212,3 +212,19 @@ if (servicesContainer) {
 
     servicesContainer.appendChild(ul)
 }
+//REGEX
+//ime kompanije mora poceti velikim slovom ili brojem i da ima bar 2 slova ili broja (npr. A1)
+const nameReg = /[A-Z0-9][a-z0-9]{1, }/
+//email sme imati sva mala slova, brojeve i tacke. Mora se zavrsiti s @(domen koji je od min. 2 slova a max, 7).[moze biti jos jedan domen].rs/com(tako nesto)
+const email = /[a-z0-9.]{2, }@[a-z]{2, 7}.[a-z]{2, 4}/ //doradaiti
+//radio mora biti selefcted (companySize.value ne sme biti prazan string)
+const form = document.querySelector('#form')
+const companySize = form.companySize
+//service select value mora biti > 0
+const serviceSelect = document.querySelector('#serviceSelect')
+//terms mrroa biti selected
+const termsBox = document.querySelector('#terms')
+const submitBtn = document.querySelector('#submit')
+termsBox.addEventListener('click', ()=>{
+    submitBtn.disabled ? submitBtn.disabled = "" : submitBtn.disabled = "disabled"
+})
