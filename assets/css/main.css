@@ -3934,3 +3934,26 @@ input, select, textarea {
 			padding: 10px;
 			border-radius: 8px;
 		}
+
+		#teamContainer{
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2%;
+			justify-content: center;
+			align-items: stretch;
+			height: 100%;
+		}
+
+		.member{
+			height: 100%;
+			width: 300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		.member img {
+			width: 300px;
+			height:300px;
+		}

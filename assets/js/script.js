@@ -228,3 +228,59 @@ const submitBtn = document.querySelector('#submit')
 termsBox.addEventListener('click', ()=>{
     submitBtn.disabled ? submitBtn.disabled = "" : submitBtn.disabled = "disabled"
 })
+
+
+//TEAM
+const members = [
+    {
+        name: "Armin Arlert",
+        role: "Frontend Dev."
+    },
+    {
+        name: "Mikasa Ackerman",
+        role: "Designer"
+    },
+    {
+        name: "Tanjiro Kamado",
+        role: "HR"
+    },
+    {
+        name: "Casca Doe",
+        role: "Backend dev."
+    },
+    {
+        name: "Thomas",
+        role: "Moral support"
+    },
+    {
+        name: "Farnese Vandimion",
+        role: "CEO"
+    }
+]
+const teamContainer = document.querySelector('#teamContainer')
+function createMemberBlock(member, index){
+    let article = document.createElement('article')
+    article.classList.add('member')
+
+    let img = document.createElement('img')
+    img.src = imgPath + 'worker' + (index + 1) + '.jpg'
+    img.alt = 'worker'+index
+
+    let name = document.createElement('h4')
+    name.textContent = member.name
+
+    let strong = document.createElement('strong')
+    strong.innerHTML = member.role
+    let h5 = document.createElement('h5')
+    h5.appendChild(strong)
+
+    article.append(img,name,h5)
+
+    return article
+}
+
+if (teamContainer) {
+    for (let i = 0;i<members.length;i++){
+        teamContainer.appendChild(createMemberBlock(members[i], i))
+    }
+}
