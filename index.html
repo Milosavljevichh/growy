@@ -147,11 +147,11 @@
 										<div id="radioGroup" class="formGroup">
 											<div>
 												<input type="radio" name="companySize" id="companySizeSmall" value="small" />
-												<label for="companySizeSmall">Startup</label>
+												<label for="companySizeSmall" id="companySizeSmallLabel">Startup</label>
 											</div>
 											<div>
 												<input type="radio" name="companySize" id="companySizeBig" value="big" />
-												<label for="companySizeBig">Corporation</label>
+												<label for="companySizeBig" id="companySizeBigLabel">Corporation</label>
 											</div>
 										</div>
 										<select name="serviceSelect" id="serviceSelect">
@@ -165,6 +165,7 @@
 											<label for="terms">I agree to terms and conditions</label>
 										</div>
 										<input type="submit" id="submit" disabled="disabled" />
+										<p id="errorMsg"></p>
 									</form>
 								</div>
 							</section>

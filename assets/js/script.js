@@ -224,9 +224,10 @@ if (servicesContainer) {
 }
 //REGEX
 //ime kompanije mora poceti velikim slovom ili brojem i da ima bar 2 slova ili broja (npr. A1)
-const nameReg = /[A-Z0-9][a-z0-9]{1, }/
+const nameReg = /[A-Z0-9][A-Za-z0-9]{1,}/
 //email sme imati sva mala slova, brojeve i tacke. Mora se zavrsiti s @(domen koji je od min. 2 slova a max, 7).[moze biti jos jedan domen].rs/com(tako nesto)
-const email = /[a-z0-9.]{2, }@[a-z]{2, 7}.[a-z]{2, 4}/ //doradaiti
+const emailReg = /^[a-z0-9.]+@[a-z]{2,7}(\.[a-z]{2,4})+$/
+const phoneReg = /^[\d]{7,12}$/
 //radio mora biti selefcted (companySize.value ne sme biti prazan string)
 const form = document.querySelector('#form')
 const companySize = form.companySize
@@ -237,6 +238,67 @@ const termsBox = document.querySelector('#terms')
 const submitBtn = document.querySelector('#submit')
 termsBox.addEventListener('click', ()=>{
     submitBtn.disabled ? submitBtn.disabled = "" : submitBtn.disabled = "disabled"
+})
+
+submitBtn.addEventListener('click', (event)=>{
+    const nameInput = document.querySelector('#company')
+    const emailInput = document.querySelector('#email')
+    const phoneInput = document.querySelector('#phone')
+    const sizeValue = form.companySize.value
+    const errorMsg = document.querySelector('#errorMsg')
+    
+    let errors = []
+    let invalid = []
+
+    if (!nameReg.test(nameInput.value)) {
+        invalid.push(nameInput)
+        errors.push('Ime kompanije mora poceti velikim slovom ili brojem i imati barem 2 slova ili broja (npr. A1)')
+    } 
+    
+    if (!emailReg.test(emailInput.value)) {
+        invalid.push(emailInput)
+        errors.push('Molimo unesite email u ispravnom formatu')
+    }
+
+    if (!phoneReg.test(phoneInput.value)) {
+        invalid.push(phoneInput)
+        errors.push('Format telefona mora biti: xxxxxxxxxx')
+    }
+
+    if (!sizeValue) {
+        document.querySelector('#companySizeSmallLabel').classList.add('error')
+        document.querySelector('#companySizeBigLabel').classList.add('error')
+        errors.push('Molimo odaberite velicinu kompanije.');
+      } else {
+        document.querySelector('#companySizeSmallLabel').classList.remove('error')
+        document.querySelector('#companySizeBigLabel').classList.remove('error')
+      }
+
+    if (serviceSelect.value === "0") {
+        invalid.push(serviceSelect)
+        errors.push('Molimo odaberite servis.');
+    }
+
+    invalid.forEach((input)=>{
+        event.preventDefault()
+        input.classList.add('invalid')
+        input.addEventListener('change', ()=>{
+            input.classList.remove('invalid')
+        })
+    })
+
+    if (errors.length > 0) {
+        event.preventDefault()
+        errorMsg.innerHTML = errors.join('<br>');
+        errorMsg.classList.add('error')
+    } else {
+        event.preventDefault()
+        errorMsg.innerHTML = 'Forma je uspesno poslata'
+        if (errorMsg.classList.contains('error')) {
+            errorMsg.classList.remove('error')
+        }
+        errorMsg.classList.add('success')
+    }
 })
 
 
