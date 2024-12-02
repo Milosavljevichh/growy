@@ -1,5 +1,6 @@
 // MENI
 const navBar  = document.querySelector('#navLinks')
+const navHamburgerBar = document.querySelector('#navHamburgerLinks')
 const navLinks = [
     {
         href:"index.html",
@@ -28,11 +29,20 @@ function createNavLink(link){
 
 if (navBar){
     let ul = document.createElement('ul')
+    let ul2 = document.createElement('ul')
     for (let i = 0;i<navLinks.length;i++){
         ul.appendChild(createNavLink(navLinks[i]))
+        ul2.appendChild(createNavLink(navLinks[i]))
     }
     navBar.appendChild(ul)
+    navHamburgerBar.appendChild(ul2)
 }
+
+//HAMBURGER MENI
+const hamburgerBtn = document.querySelector('#hamburgerMenu')
+hamburgerBtn.addEventListener('click', ()=>{
+    navHamburgerBar.classList.contains('noDisplay') ? navHamburgerBar.classList.remove('noDisplay') : navHamburgerBar.classList.add('noDisplay')
+})
 
 //Achievements
 const achievementContainer = document.querySelector('#achievementContainer')

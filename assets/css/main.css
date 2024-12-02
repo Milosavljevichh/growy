@@ -3210,7 +3210,7 @@ input, select, textarea {
 
 /* Nav */
 
-	#nav {
+	#nav, #navHamburgerLinks {
 		-moz-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		-ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
@@ -3230,7 +3230,7 @@ input, select, textarea {
 			color: #636363;
 		}
 
-		#nav a:hover {
+		#nav a:hover, #navHamburgerLinks a:hover {
 			color: #636363;
 		}
 
@@ -3259,13 +3259,13 @@ input, select, textarea {
 			padding-top: 4.25em;
 		}
 
-		#nav ul {
+		#nav ul, #navHamburgerLinks ul {
 			margin: 0;
 			padding: 0;
 			list-style: none;
 		}
 
-			#nav ul li {
+			#nav ul li, #navHamburgerLinks ul li {
 				-moz-transition: margin 0.2s ease;
 				-webkit-transition: margin 0.2s ease;
 				-ms-transition: margin 0.2s ease;
@@ -3276,7 +3276,7 @@ input, select, textarea {
 				vertical-align: middle;
 			}
 
-				#nav ul li a {
+				#nav ul li a, #navHamburgerLinks ul li a {
 					-moz-transition: font-size 0.2s ease;
 					-webkit-transition: font-size 0.2s ease;
 					-ms-transition: font-size 0.2s ease;
@@ -3972,4 +3972,21 @@ input, select, textarea {
 
 		#hamburgerMenu img {
 			width: 32px;
+		}
+
+		#navHamburgerLinks ul li {
+			display: block;
+			font-weight: bold;
+		}
+
+		#navHamburgerLinks ul li a {
+			width: 100%;
+		}
+
+		#navHamburgerLinks {
+			border-radius: 0 !important;
+		}
+
+		.noDisplay {
+			display: none;
 		}
