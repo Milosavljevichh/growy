@@ -1,5 +1,5 @@
 // MENI
-const navBar  = document.querySelector('#nav')
+const navBar  = document.querySelector('#navLinks')
 const navLinks = [
     {
         href:"index.html",
