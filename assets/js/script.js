@@ -41,7 +41,7 @@ if (navBar){
 //HAMBURGER MENI
 const hamburgerBtn = document.querySelector('#hamburgerMenu')
 hamburgerBtn.addEventListener('click', ()=>{
-    navHamburgerBar.classList.contains('noDisplay') ? navHamburgerBar.classList.remove('noDisplay') : navHamburgerBar.classList.add('noDisplay')
+    navHamburgerBar.classList.toggle('noDisplay');
 })
 
 //Achievements
