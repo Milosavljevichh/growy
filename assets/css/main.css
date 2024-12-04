@@ -4016,4 +4016,17 @@ input, select, textarea {
 		html {
 			scroll-behavior: smooth;
 		  }
+
+		#autor {
+			width: 50%;
+			border-radius: 8px;
+		}
 		  
+		#autorContent {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+		}
