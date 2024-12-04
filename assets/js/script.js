@@ -367,3 +367,24 @@ if (teamContainer) {
         teamContainer.appendChild(createMemberBlock(members[i], i))
     }
 }
+
+//JQUERY - FADING IN ACHIEVEMENTS
+$(document).ready(function () {
+    
+    $('#achievementList li').each(function () {
+        const $this = $(this);
+
+        new Waypoint({
+            element: this,
+            handler: function () {
+                $this.hide().fadeIn(1700);
+                this.destroy();
+            },
+            offset: '100%',
+        });
+    });
+});
+
+  
+  
+  
