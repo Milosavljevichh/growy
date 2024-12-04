@@ -4012,3 +4012,8 @@ input, select, textarea {
 			border-color: red !important;
 			color: red !important;
 		}
+
+		html {
+			scroll-behavior: smooth;
+		  }
+		  

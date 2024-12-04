@@ -8,7 +8,7 @@ const navLinks = [
         currentlyActive: false
     },
     {
-        href:"contact.html",
+        href:"#contactHeader",
         text:"Contact",
         currentlyActive: false
     },
