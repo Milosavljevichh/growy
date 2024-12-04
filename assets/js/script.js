@@ -231,7 +231,7 @@ const phoneReg = /^[\d]{7,12}$/
 //radio mora biti selefcted (companySize.value ne sme biti prazan string)
 const form = document.querySelector('#form')
 const companySize = form.companySize
-//service select value mora biti > 0
+//service mora biti izabran
 const serviceSelect = document.querySelector('#serviceSelect')
 //terms mrroa biti selected
 const termsBox = document.querySelector('#terms')
@@ -246,6 +246,8 @@ submitBtn.addEventListener('click', (event)=>{
     const phoneInput = document.querySelector('#phone')
     const sizeValue = form.companySize.value
     const errorMsg = document.querySelector('#errorMsg')
+    const smallLabel = document.querySelector('#companySizeSmallLabel')
+    const bigLabel = document.querySelector('#companySizeBigLabel')
     
     let errors = []
     let invalid = []
@@ -266,12 +268,12 @@ submitBtn.addEventListener('click', (event)=>{
     }
 
     if (!sizeValue) {
-        document.querySelector('#companySizeSmallLabel').classList.add('error')
-        document.querySelector('#companySizeBigLabel').classList.add('error')
+        smallLabel.classList.add('error')
+        bigLabel.classList.add('error')
         errors.push('Molimo odaberite velicinu kompanije.');
       } else {
-        document.querySelector('#companySizeSmallLabel').classList.remove('error')
-        document.querySelector('#companySizeBigLabel').classList.remove('error')
+        smallLabel.classList.remove('error')
+        bigLabel.classList.remove('error')
       }
 
     if (serviceSelect.value === "0") {
@@ -282,8 +284,17 @@ submitBtn.addEventListener('click', (event)=>{
     invalid.forEach((input)=>{
         event.preventDefault()
         input.classList.add('invalid')
-        input.addEventListener('change', ()=>{
+        input.addEventListener('click', ()=>{
             input.classList.remove('invalid')
+        })
+    })
+
+    companySize.forEach((radio)=>{
+        radio.addEventListener('click', ()=>{
+            if (smallLabel.classList.contains('error')) {
+                smallLabel.classList.remove('error')
+                bigLabel.classList.remove('error')
+            }
         })
     })
 
