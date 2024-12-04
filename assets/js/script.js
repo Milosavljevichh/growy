@@ -385,6 +385,23 @@ $(document).ready(function () {
     });
 });
 
-  
-  
+//dodavanje hover animacija preko jquery
+$(document).ready(function() {
+    $('.reasonBlock').hover(
+        function() {
+            $(this).css({
+                'transform': 'scale(1.03)',
+                'box-shadow': '0 10px 20px rgba(0, 0, 0, 0.4)',
+                'transition': 'all 0.5s'
+            });
+        },
+        function() {
+            $(this).css({
+                'transform': 'scale(1)',
+                'box-shadow': '0 0 0 #fff'
+            });
+        }
+    );
+});
+
   
