@@ -202,11 +202,11 @@ function serviceBlock(block){
     const p = document.createElement('p')
     p.textContent = block.text
 
-    const button = document.createElement('button')
-    button.id = "serviceBtn"
-    button.textContent = "Read More"
+    // const button = document.createElement('button')
+    // button.id = "serviceBtn"
+    // button.textContent = "Read More"
 
-    article.append(img,h3,p,button)
+    article.append(img,h3,p)
     return article
 }
 
@@ -390,14 +390,14 @@ $(document).ready(function() {
     $('.reasonBlock').hover(
         function() {
             $(this).css({
-                'transform': 'scale(1.03)',
+                'transform': 'scale(1.03) rotate(2deg)',
                 'box-shadow': '0 10px 20px rgba(0, 0, 0, 0.4)',
                 'transition': 'all 0.5s'
             });
         },
         function() {
             $(this).css({
-                'transform': 'scale(1)',
+                'transform': 'scale(1) rotate(0deg)',
                 'box-shadow': '0 0 0 #fff'
             });
         }
