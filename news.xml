@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Growy</title>
+        <link>https://milosavljevichh.github.io/growy/index.html</link>
+        <description>Be the first to be updated!</description>
+
+        <item>
+            <title>Achievements</title>
+            <link>https://milosavljevichh.github.io/fatty-patty/index.html</link>
+            <description>What happened recently?</description>
+        </item>
+    </channel>
+</rss>
