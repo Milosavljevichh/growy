@@ -456,4 +456,10 @@ $(document).ready(function() {
     )
 })
 
-  
+
+$(document).ready(function () {
+    $('.faq-question').on('click', function () {
+      $(this).next('.faq-answer').slideToggle(); // Toggle the answer visibility
+      $(this).toggleClass('active'); // Add an active class for styling, if needed
+    });
+  });

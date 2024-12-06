@@ -261,3 +261,23 @@ html {
 .noUnderline {
     border-bottom: none;
 }
+
+.faq-section {
+  border: 2px #935d8c solid;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 66px;
+  text-align: left;
+}
+.faq-question {
+  font-weight: bold;
+  cursor: pointer;
+  margin: 20px 0;
+  border-bottom: 2px solid #935d8c;
+}
+.faq-answer {
+  display: none;
+  padding-left: 10px;
+  border-left: 3px solid #5f4d93;
+  margin: 5px 0;
+}
