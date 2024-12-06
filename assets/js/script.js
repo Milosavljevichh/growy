@@ -227,7 +227,7 @@ if (servicesContainer) {
 const nameReg = /[A-Z0-9][A-Za-z0-9]{1,}/
 //email sme imati sva mala slova, brojeve i tacke. Mora se zavrsiti s @(domen koji je od min. 2 slova a max, 7).[moze biti jos jedan domen].rs/com(tako nesto)
 const emailReg = /^[a-z0-9.]+@[a-z]{2,7}(\.[a-z]{2,4})+$/
-const phoneReg = /^[\d]{7,12}$/
+const phoneReg = /^[\d]{9,10}$/
 //radio mora biti selefcted (companySize.value ne sme biti prazan string)
 const form = document.querySelector('#form')
 const companySize = form.companySize
@@ -264,7 +264,7 @@ submitBtn.addEventListener('click', (event)=>{
 
     if (!phoneReg.test(phoneInput.value)) {
         invalid.push(phoneInput)
-        errors.push('Format telefona mora biti: xxxxxxxxxx')
+        errors.push('Format telefona mora biti: 1234567891')
     }
 
     if (!sizeValue) {
