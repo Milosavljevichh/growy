@@ -44,6 +44,58 @@ hamburgerBtn.addEventListener('click', ()=>{
     navHamburgerBar.classList.toggle('noDisplay');
 })
 
+//What we deliver
+const deliveryContainer = document.querySelector('#achievementList')
+const featureBlocks = [
+    {
+        icon: "fa-code",
+        style: 1,
+        isSolid: true,
+        title: "Inovative Solutions",
+        text: "We craft creative strategies and cutting-edge tools to drive your business forward and keep you ahead of the competition."
+    },
+    {
+        icon: "fa-gem",
+        style: 5,
+        isSolid: false,
+        title: "Premium quality",
+        text: "Our commitment to excellence ensures top-notch results, delivering value and reliability in every project we undertake."
+    },
+    {
+        icon: "fa-copy",
+        style: 3,
+        isSolid: false,
+        title: "Upfront with you",
+        text: "Transparency is key—we provide clear communication and honest feedback to build trust and lasting partnerships."
+    },
+]
+
+function createFeatureBlock(block){
+    let li = document.createElement('li')
+    let span = document.createElement('span')
+    span.classList.add('icon')
+    span.classList.add('major')
+    if (block.isSolid) {span.classList.add('solid')}
+    span.classList.add(`style${block.style}`)
+    span.classList.add(block.icon)
+
+    let h3 = document.createElement('h3')
+    h3.innerHTML = block.title
+
+    let p = document.createElement('p')
+    p.innerHTML = block.text
+
+    li.append(span,h3,p)
+    return li
+}
+
+if (deliveryContainer){
+    for (block of featureBlocks) {
+        deliveryContainer.appendChild(createFeatureBlock(block))
+    }
+}
+
+
 //Achievements
 const achievementContainer = document.querySelector('#achievementContainer')
 const achievements = [
