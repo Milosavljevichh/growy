@@ -456,10 +456,10 @@ $(document).ready(function() {
     )
 })
 
-
+//Funkcionalnost FAQ-u
 $(document).ready(function () {
     $('.faq-question').on('click', function () {
-      $(this).next('.faq-answer').slideToggle(); // Toggle the answer visibility
-      $(this).toggleClass('active'); // Add an active class for styling, if needed
+      $(this).next('.faq-answer').slideToggle();
+      $(this).toggleClass('active');
     });
   });
