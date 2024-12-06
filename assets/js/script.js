@@ -372,18 +372,18 @@ if (teamContainer) {
 $(document).ready(function () {
     
     $('#achievementList li').each(function () {
-        const $this = $(this);
+        const $this = $(this)
 
         new Waypoint({
             element: this,
             handler: function () {
-                $this.hide().fadeIn(1700);
-                this.destroy();
+                $this.hide().fadeIn(1700)
+                this.destroy()
             },
             offset: '100%',
-        });
-    });
-});
+        })
+    })
+})
 
 //dodavanje hover animacija preko jquery
 $(document).ready(function() {
@@ -393,15 +393,15 @@ $(document).ready(function() {
                 'transform': 'scale(1.03) rotate(2deg)',
                 'box-shadow': '0 10px 20px rgba(0, 0, 0, 0.4)',
                 'transition': 'all 0.5s'
-            });
+            })
         },
         function() {
             $(this).css({
                 'transform': 'scale(1) rotate(0deg)',
                 'box-shadow': '0 0 0 #fff'
-            });
+            })
         }
-    );
-});
+    )
+})
 
   
